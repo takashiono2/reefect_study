@@ -1,0 +1,8 @@
+/node_modules
+.DS_Store
+/src/images
+/REEFECT.code-workspace
+./react-useeffect-understanding/node_modules
+/react-app/node_modules
+/react-app/public
+/react-app/src/setupTests.js
