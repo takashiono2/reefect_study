@@ -8,3 +8,9 @@
 ## react-hook-useref
 * [初心者にもわかるReact HookのuseRefの使い方](https://reffect.co.jp/react/react-hook-useref/)
 ---
+##　　react-usecontext-understanding
+* [こんなに簡単なの？React Hook useContextでデータ共有](https://reffect.co.jp/react/react-usecontext-understanding/)
+---
+##　　react-react-axios
+* [Reactを使ってaxiosを学ぶ](https://reffect.co.jp/react/react-axios/)
+---
