@@ -11,7 +11,7 @@
 <style>
   #overlay {
     /*　画面全体を覆う設定　*/
-    「」
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,9 +19,9 @@
     background-color: rgba(0, 0, 0, 0.5);
 
     /*　画面の中央に要素を表示させる設定　*/
-    display: 「」;
-    align-items: 「」;
-    justify-content: 「」;
+    display: flex;
+    align-items: center;
+    justify-content:center;
   }
 
   #content {
@@ -36,17 +36,15 @@
   <div id="root"></div>
   <script type="text/babel">
     const { useState } = React//cdnの利用の場合必須
-//onClick時、親要素に伝播しないようにする。
-//Childrenを使っています。を表示
-    function Modal({ show, setShow,「」}) {
+    function Modal({ show, setShow,children}) {
       const closeModal = () => {
         return setShow(false);
       }
       if (show) {
         return (
           <div id="overlay" onClick={closeModal}>
-            <div id="content" onClick={(e) => 「」}>
-              「」
+            <div id="content" onClick={(e) => e.stopPropagation()}>
+              {children}
               <button onClick={closeModal}>
                 Close
               </button>

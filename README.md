@@ -14,3 +14,7 @@
 ##　　react-react-axios
 * [Reactを使ってaxiosを学ぶ](https://reffect.co.jp/react/react-axios/)
 ---
+##　　react-memo
+* [Reactの再描写(re-render)って何??useCallback, useMemo, memoと一緒に理解。](https://reffect.co.jp/react/react-memo/)
+##　　react-redux-for-beginner
+* [Reac初心者でも読めば必ずわかるReactのRedux講座](https://reffect.co.jp/react/react-redux-for-beginner/)

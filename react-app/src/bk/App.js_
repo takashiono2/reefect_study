@@ -1,0 +1,19 @@
+import './App.css';
+import ComponentA from './components/ComponentA';
+import { CountProvider } from './context/CountContext';
+import { AnotherCountProvider } from './context/AnotherCountContext';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Learn useContext</h1>
+      <CountProvider>
+        <AnotherCountProvider>
+          <ComponentA />
+        </AnotherCountProvider>
+      </CountProvider>
+    </div>
+  );
+}
+
+export default App;

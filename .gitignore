@@ -6,3 +6,24 @@
 /react-app/node_modules
 /react-app/public
 /react-app/src/setupTests.js
+# dependencies
+/redux-learn/node_modules
+/redux-learn/public
+/redux-learn/.pnp
+/redux-learn/.pnp.js
+# testing
+/redux-learn/coverage
+# production
+/redux-learn/build
+# misc
+/redux-learn/.DS_Store
+/redux-learn/.env.local
+/redux-learn/.env.development.local
+/redux-learn/.env.test.local
+/redux-learn/.env.production.local
+
+/redux-learn/npm-debug.log*
+/redux-learn/yarn-debug.log*
+/redux-learn/yarn-error.log*
+
+
