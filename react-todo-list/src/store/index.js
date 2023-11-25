@@ -12,19 +12,28 @@ const initialState = {
     },
   ],
 };
-//reducer関数を設定
+//reducer関数を設定。actionが"DONE_LIST"の場合、listsからlistと complete: true,を返す
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "DONE_LIST":
       return {
         lists: state.lists.map((list) => {
-          if (list.name !== action.payload) return list;
+          if (list.name !== action.payload)
+            return list;
           return {
             ...list,
-            complete: true,
+            complete: true
           };
         }),
       };
+    case "DELETE_LIST":
+      return {
+        lists: state.lists.filter((list) => list.name !== action.payload),
+      };
+    case "ADD_LIST":
+        return {
+          lists: [...state.lists, action.payload],
+        };
     default:
       return state;
   }
