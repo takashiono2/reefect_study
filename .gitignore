@@ -26,4 +26,23 @@
 /redux-learn/yarn-debug.log*
 /redux-learn/yarn-error.log*
 
+# dependencies
+/react-todo-list/node_modules
+/react-todo-list/public
+/react-todo-list/.pnp
+/react-todo-list/.pnp.js
+# testing
+/react-todo-list/coverage
+# production
+/react-todo-list/build
+# misc
+/react-todo-list/.DS_Store
+/react-todo-list/.env.local
+/react-todo-list/.env.development.local
+/react-todo-list/.env.test.local
+/react-todo-list/.env.production.local
+
+/react-todo-list/npm-debug.log*
+/react-todo-list/yarn-debug.log*
+/react-todo-list/yarn-error.log*
 
