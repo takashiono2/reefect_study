@@ -20,3 +20,7 @@
 ##　　react-redux-for-beginner
 * [Reac初心者でも読めば必ずわかるReactのRedux講座](https://reffect.co.jp/react/react-redux-for-beginner/)
 ---
+##　　react-redux-for-beginner
+* [【React Redux初心者向け】Todoリスト作成を通してしっかり学ぶRedux](https://reffect.co.jp/react/react-redux-todo/)
+---
+

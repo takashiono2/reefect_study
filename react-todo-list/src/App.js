@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch();
+  const doneList = (name) => {
+    dispatch({ type: 'DONE_LIST', payload: name });
+  };
+  const lists = useSelector((state) => state.lists);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ReduxでTodoリスト作成</h1>
+      <h2>未完了のTodoリスト</h2>
+      <ul>
+        {lists
+          .filter((list) => list.complete === false)
+          .map((list, index) => (
+            <div key={index}>
+              {list.name}
+              <button onClick={() => doneList(list.name)}>完了</button>
+            </div>
+          ))}
+      </ul>
+      <h2>完了したTodoリスト</h2>
+      <ul>
+        {lists
+          .filter((list) => list.complete === true)
+          .map((list, index) => (
+            <div key={index}>{list.name}</div>
+          ))}
+      </ul>
     </div>
   );
 }
