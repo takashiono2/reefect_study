@@ -3,36 +3,43 @@ import { useSelector, useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 
 function App() {
-  const lists = useSelector((state) => state.lists);
+  const lists = useSelector(state => state.lists);
   const dispatch = useDispatch();
   const doneList = (name) => {
-    dispatch({ type: "DONE_LIST", payload: name });
-  };
+    dispatch(
+      {
+        type: "DONE_LIST",
+        payload: name
+      }
+    );
+  }
   const deleteList = (name) => {
-    dispatch({ type: "DELETE_LIST", payload: name });
-  };
-
-  const [name, setName] = useState("");
-  const [complete, setComplete] = useState(false);
-
-  const inputText = (e) => {
+    dispatch(
+      {
+        type: "DELETE_LIST",
+        payload: name
+      }
+    );
+  }
+  const [ name, setName ] = useState('');
+  const [ complete, setComplete ] = useState(false);
+  const inputText = (e) =>{
     setName(e.target.value);
-  };
-
+  }
   const addList = () => {
-    if (!name) return;
-
+    if(!name) return;
     setComplete(false);
+    dispatch(
+      {
+        type: 'ADD_LIST',
+        payload: {
+          name,
+          complete
+        }
+      }
+    );
+  }
 
-    dispatch({
-      type: 'ADD_LIST',
-      payload: {
-        name,
-        complete,
-      },
-    });
-    setName('');
-  };
   return (
     <div className="App">
       <h1>ReduxでTodoリスト作成</h1>

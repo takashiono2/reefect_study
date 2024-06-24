@@ -8,19 +8,31 @@
 ## react-hook-useref
 * [初心者にもわかるReact HookのuseRefの使い方](https://reffect.co.jp/react/react-hook-useref/)
 ---
-##　　react-usecontext-understanding
+## react-usecontext-understanding
 * [こんなに簡単なの？React Hook useContextでデータ共有](https://reffect.co.jp/react/react-usecontext-understanding/)
 ---
-##　　react-react-axios
+## react-react-axios
 * [Reactを使ってaxiosを学ぶ](https://reffect.co.jp/react/react-axios/)
 ---
-##　　react-memo
+## react-memo
 * [Reactの再描写(re-render)って何??useCallback, useMemo, memoと一緒に理解。](https://reffect.co.jp/react/react-memo/)
 ---
-##　　react-redux-for-beginner
+## react-redux-for-beginner
 * [Reac初心者でも読めば必ずわかるReactのRedux講座](https://reffect.co.jp/react/react-redux-for-beginner/)
 ---
-##　　react-redux-for-beginner
+## react-redux-todo
 * [【React Redux初心者向け】Todoリスト作成を通してしっかり学ぶRedux](https://reffect.co.jp/react/react-redux-todo/)
 ---
+## redux-toolkit
+* [Redux入門者向け初めてのRedux ToolkitとRedux Thunkの非同期処理](https://reffect.co.jp/react/redux-toolkit/)
+---
+## next-js-13
+* [進化が止まらない！Next.js13の基本機能をしっかり理解しよう](https://reffect.co.jp/react/next-js-13)
+---
+## react-usestate-to-do-application
+* [React useStateで作るシンプルToDoアプリ](https://reffect.co.jp/react/reack-usestate-to-do-application)
+---
+<!-- ##　　react-hook-usestate-understand
+* [初心者でもわかるReact Hook のuseStateを使い方](https://reffect.co.jp/react/react-hook-usestate-understand)
+--- -->
 

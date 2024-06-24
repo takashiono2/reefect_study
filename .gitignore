@@ -46,3 +46,32 @@
 /react-todo-list/yarn-debug.log*
 /react-todo-list/yarn-error.log*
 
+# dependencies
+/redux-toolkit-beginner/node_modules
+/redux-toolkit-beginner/public
+/redux-toolkit-beginner/.pnp
+/redux-toolkit-beginner/.pnp.js
+# testing
+/redux-toolkit-beginner/coverage
+# production
+/redux-toolkit-beginner/build
+# misc
+/redux-toolkit-beginner/.DS_Store
+/redux-toolkit-beginner/.env.local
+/redux-toolkit-beginner/.env.development.local
+/redux-toolkit-beginner/.env.test.local
+/redux-toolkit-beginner/.env.production.local
+
+/redux-toolkit-beginner/npm-debug.log*
+/redux-toolkit-beginner/yarn-debug.log*
+/redux-toolkit-beginner/yarn-error.log*
+/redux-toolkit-beginner/package-lock.json
+
+#next-js-13
+/next-js-13/package-lock.json
+
+# react-usestate-to-do-application
+/react-usestate-to-do-application/node_modules
+/react-usestate-to-do-application/public
+/react-usestate-to-do-application/.DS_Store
+/react-usestate-to-do-application/package-lock.json
