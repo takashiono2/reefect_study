@@ -1,20 +1,23 @@
 import {memo} from 'react';
 import TodoList from './TodoList'
 
-function Todo({todos, completeTodo}) {
-  console.log('Todo')
+function Todo({ todos,completeTodo }) {
+  console.log('Todo');
   return (
     <ul>
-      {todos.map((todo,index) =>
-        <TodoList
+      {
+        todos.map((todo, index) => (
+          <TodoList
           todo={todo}
-          completeTodo={completeTodo}
-          index={index}
           key={index}
-        />
-      )}
+          index={index}
+          completeTodo={completeTodo}
+          />
+        ))
+      }
     </ul>
   )
-}
 
-export default memo(Todo)
+};
+
+export default memo(Todo);

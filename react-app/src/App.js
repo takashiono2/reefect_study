@@ -1,28 +1,37 @@
-import { useCallback, useState } from 'react';
-import './App.css';
-import Profile from './components/Profile';
+import { memo, useCallback, useState } from 'react';
 
-const App = () => {
+const Child = memo(({ setIsTextChanged }) => {
+  console.log('再描写');
+  return <button onClick={setIsTextChanged}>Toggle</button>;
+});
+
+function App() {
+  const [isTextChanged, setIsTextChanged] = useToggle();
   const [name, setName] = useState('');
-  const [nationality, setNationality] = useState('');
 
-  const showNationality = useCallback(
-    () => `私は${nationality}です`,[nationality]) ;
   return (
     <div>
-      <h1>App</h1>
-      <div className="app" >
-        <label>名前</label>
-        <input onChange={(e) => setName(e.target.value)} />
-      </div>
+      <h1>useToggle</h1>
       <div>
-        <label>国籍</label>
-        <input onChange={(e) => setNationality(e.target.value)} />
+        <label>名前</label> <input onChange={(e) => setName(e.target.value)} />
       </div>
-
-      <Profile showNationality={showNationality} />
+      <div>{isTextChanged ? 'Yes' : 'No'}</div>
+      <Child setIsTextChanged={setIsTextChanged} />
     </div>
   );
+}
+
+// Hook
+// Parameter is the boolean, with default "false" value
+const useToggle = (initialState = false) => {
+  // Initialize the state
+  const [state, setState] = useState(initialState);
+
+  // Define and memorize toggler function in case we pass down the comopnent,
+  // This function change the boolean value to it's opposite value
+  const toggle = useCallback(() => setState((state) => !state), []);
+
+  return [state, toggle];
 };
 
 export default App;
