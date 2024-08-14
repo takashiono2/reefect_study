@@ -4,13 +4,30 @@ const Header = () => {
   return (
     <header className="sticky top-0 border-b z-10 bg-white">
       <div className="max-w-4xl mx-auto flex justify-between items-center h-12">
-        <Link href="/">
-          <a>LOGO</a>
+        <Link href="/" className="font-bold text-lg">
+          LOGO
         </Link>
-        <div>Link</div>
+        <div className="text-sm">Link</div>
       </div>
     </header>
   );
 };
 
 export default Header;
+
+// justify-between
+//
+// .justify-between {
+//   「」;
+// }
+
+// items-center
+//
+// .items-center {
+//   「」;
+// }
+
+// .h-12 {
+//
+//   「」: 3rem /* 48px */;
+// }
