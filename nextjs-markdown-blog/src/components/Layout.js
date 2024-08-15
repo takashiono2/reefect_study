@@ -11,41 +11,25 @@ export default function Layout({ children }) {
   );
 }
 
-//flex
-//
-// .flex {
-//   「」
-// }
-
 //flex-col min-h-screen
 //
 // .flex-col {
-//   「」
+//   flex-direction: column
 // }
 //
-
-// max-w-4xl
-//
-// .max-w-4xl {
-//   「」: 56rem /* 896px */;
+// .container {
+//   display: flex;
+//   flex-direction: 「」;//主軸の向きを定義。デフォルト値、水平方向
 // }
-
-// w-full
-//
-// .w-full {
-//   「」
+// .container {
+//   display: flex;
+//   flex-direction: 「」;//水平方向に逆向き
 // }
-
-// mx-auto
-
-// .mx-auto {
-//   「」
-//   「」
+// .container {
+//   display: flex;
+//   flex-direction: 「」;//縦向き
 // }
-
-// my-8
-
-// .my-8 {
-//   「」: 2rem /* 32px */;
-//   「」: 2rem /* 32px */;
+// .container {
+//   display: flex;
+//   flex-direction: 「」;//縦向きの逆方向
 // }

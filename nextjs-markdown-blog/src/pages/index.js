@@ -1,9 +1,20 @@
-export default function Home() {
+import fs from 'fs';
+
+export const getStaticProps = () => {
+  const files = fs.readdirSync('posts');
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, '');
+    const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    console.log('slug:', slug);
+  });
+  return {
+    props: {
+      posts: [],
+    },
+  };
+};
+
+
+export default function Home({ posts }) {
   return <div className="my-8">コンテンツ</div>;
 }
-
-// .my-8 {
-//
-//   「」: 2rem /* 32px */;
-//   「」: 2rem /* 32px */;
-// }
