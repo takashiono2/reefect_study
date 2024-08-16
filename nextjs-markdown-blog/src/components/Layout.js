@@ -27,9 +27,9 @@ export default function Layout({ children }) {
 // }
 // .container {
 //   display: flex;
-//   flex-direction: 「」;//縦向き
+//   flex-direction: column;;//縦向き
 // }
 // .container {
 //   display: flex;
-//   flex-direction: 「」;//縦向きの逆方向
+//   flex-direction: column-reverse;;//縦向きの逆方向
 // }
