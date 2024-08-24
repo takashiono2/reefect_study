@@ -14,6 +14,15 @@ export const getStaticProps = () => {
     };
   });
 
+  posts.push({
+    frontMatter: { title: 'Sample Post 1', date: '2024-08-23', image: 'discordIcon.png' },
+    slug: 'sample-post-1',
+  });
+  posts.push({
+    frontMatter: { title: 'Sample Post 2', date: '2024-08-24', image: 'discordIcon.png' },
+    slug: 'sample-post-2',
+  });
+
   return {
     props: {
       posts,
@@ -24,12 +33,12 @@ export const getStaticProps = () => {
 
 export default function Home({ posts }) {
   return (
-    <div className="my-8">
-      <div className="grid grid-cols-3">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
+      <div className="my-8">
+        <div className="grid grid-cols-3">
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
       </div>
-    </div>
   );
 }

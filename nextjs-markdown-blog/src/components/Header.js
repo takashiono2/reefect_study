@@ -14,24 +14,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// #container {
-//   display: flex;
-//   justify-content: 「」;　//左よせ
-// }
-// #container {
-//   display: flex;
-//   justify-content: 「」; //中央よせ
-// }
-// #container {
-//   display: flex;
-//   justify-content: 「」;　//均等に配置し、最初のアイテムは先頭に、最後のアイテムは末尾に
-// #container {
-//   display: flex;
-//   justify-content: 「」; 　//先頭と末尾の間隔は、各アイテムの間隔の半分の大きさ
-// }
-// #container {
-//   display: flex;
-//   justify-content: 「」; 　// 先頭と末尾と各アイテムの周りには、同じ大きさの間隔を置く
-// }
-
