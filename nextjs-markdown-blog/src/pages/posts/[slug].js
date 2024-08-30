@@ -1,6 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+// import { marked } from 'marked';
+// import markdownit from 'markdown-it';
+import ReactMarkdown from 'react-markdown';
 
 export async function getStaticProps({ params }) {
   const file = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
@@ -26,7 +28,7 @@ const Post = ({ frontMatter, content }) => {
   return (
     <div>
       <h1>{frontMatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );
 };
