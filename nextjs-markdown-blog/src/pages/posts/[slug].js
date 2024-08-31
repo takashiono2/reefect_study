@@ -1,13 +1,21 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-// import { marked } from 'marked';
-// import markdownit from 'markdown-it';
-import ReactMarkdown from 'react-markdown';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
 
 export async function getStaticProps({ params }) {
   const file = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
   const { data, content } = matter(file);
-  return { props: { frontMatter: data, content } };
+
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(content);
+
+  return { props: { frontMatter: data, content: result.toString() } };
 }
 
 export async function getStaticPaths() {
@@ -17,7 +25,6 @@ export async function getStaticPaths() {
       slug: fileName.replace(/\.md$/, ''),
     },
   }));
-  console.log('paths:', paths);
   return {
     paths,
     fallback: false,
@@ -28,7 +35,7 @@ const Post = ({ frontMatter, content }) => {
   return (
     <div>
       <h1>{frontMatter.title}</h1>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </div>
   );
 };
