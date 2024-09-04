@@ -33,12 +33,12 @@ export const getStaticProps = () => {
 
 export default function Home({ posts }) {
   return (
-      <div className="my-8">
-        <div className="grid grid-cols-3">
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
+    <div className="my-8">
+      <div className="grid grid-cols-3 gap-4">
+        {posts.map((post) => (
+          <PostCard key={post.slug} post={post} />
+        ))}
       </div>
+    </div>
   );
 }
