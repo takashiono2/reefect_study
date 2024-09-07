@@ -14,18 +14,22 @@ export const getStaticProps = () => {
     };
   });
 
-  posts.push({
-    frontMatter: { title: 'Sample Post 1', date: '2024-08-23', image: 'discordIcon.png' },
-    slug: 'sample-post-1',
-  });
-  posts.push({
-    frontMatter: { title: 'Sample Post 2', date: '2024-08-24', image: 'discordIcon.png' },
-    slug: 'sample-post-2',
-  });
+  const sortedPosts = posts.sort((postA, postB) =>
+    new Date(postA.frontMatter.date) > new Date(postB.frontMatter.date) ? -1 : 1
+  );
+
+  // posts.push({
+  //   frontMatter: { title: 'Sample Post 1', date: '2024-08-23', image: 'discordIcon.png' },
+  //   slug: 'sample-post-1',
+  // });
+  // posts.push({
+  //   frontMatter: { title: 'Sample Post 2', date: '2024-08-24', image: 'discordIcon.png' },
+  //   slug: 'sample-post-2',
+  // });
 
   return {
     props: {
-      posts,
+      posts: sortedPosts,
     },
   };
 };
