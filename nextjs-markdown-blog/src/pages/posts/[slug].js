@@ -6,6 +6,8 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
 
 export async function getStaticProps({ params }) {
   const file = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
@@ -13,7 +15,11 @@ export async function getStaticProps({ params }) {
 
   const result = await unified()
     .use(remarkParse)
+    .use(remarkToc, {
+      heading: '目次',
+    })
     .use(remarkRehype)
+    .use(rehypeSlug)
     .use(rehypeStringify)
     .process(content);
 
