@@ -44,3 +44,6 @@
 ## nextjs-markdown-blog
 * [Next.jsを利用した初めての本格的Markdownブログサイトの構築](https://reffect.co.jp/react/nextjs-markdown-blog)
 ---
+## react-typescript-event
+* [【TypeScript】Reactでのイベントに設定する型の理解が少しだけ深まる](https://reffect.co.jp/react/react-typescript-event)
+---
